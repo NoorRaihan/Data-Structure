@@ -48,15 +48,31 @@ public class Main {
             }
         }
 
-        //sorting assending order
-        // int largest = 0;
-        // for(int i=0;i<oddList.size();i++) {
-            
-        //     Number n = (Number)oddList.get(i);
-        //     if(n.getN > largest) {
+        System.out.println("\n\nOddList content: ");
+        for(int i=0;i<oddList.size();i++) {
+            Number n = (Number)oddList.get(i);
+            System.out.print(n.getN() + " ");
+        }
 
-        //     }
-        // }
+        //sorting assending order
+        Number temp;
+        for(int i=0;i<oddList.size();i++) {
+            
+            Number n = (Number)oddList.get(i);
+            for(int j=i+1; j<oddList.size();j++) {
+                Number m = (Number)oddList.get(j);
+                if(n.getN() > m.getN()) {
+                    temp = n;
+                    oddList.set(i,m);
+                    oddList.set(j,temp);
+                }
+            }
+        }
+
+
+        System.out.println("\n\nLowest odd: " + ((Number)oddList.get(0)).getN());
+        System.out.println("Highest odd: " + ((Number)oddList.get(oddList.size()-1)).getN());
+
 
         //sum all the even number
         int sum = 0;
@@ -64,6 +80,6 @@ public class Main {
             Number n = (Number)evenList.get(i);
             sum += n.getN();
         }
-        System.out.println("\n\nSUM: "+ sum);
+        System.out.println("\n\nSum of even: "+ sum);
     }
 }
