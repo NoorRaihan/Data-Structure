@@ -1,6 +1,6 @@
 Visual Basic;1998
 System Programming with Unix;2010
-Algorithm in C++;1998
+Application Algorithm in C++;1998
 Data Mining;2012
 Neural Networks;2009
 Object Oriented with Java;2018

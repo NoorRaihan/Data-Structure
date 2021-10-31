@@ -41,11 +41,8 @@ public class Main {
 
         // for(int i=0; i<bookList.size();i++) {
 
-        //     Book n = bookList.get(i);
-        //     String a = n.getTitle();
-
         //     for(int j=i+1;j<bookList.size();j++) {
-        //          Book m = bookList.get(i+1);
+        //          Book m = bookList.get(j);
         //          String b = m.getTitle();
 
         //          if(a.compareTo(b) > 0) {
@@ -69,7 +66,7 @@ public class Main {
         //     }
         // }
 
-        //sorting the title
+        // //sorting the title
         for(int i=0;i<bookList.size();i++) {
 
             for(int j=1;j<bookList.size()-i;j++) {
@@ -79,22 +76,22 @@ public class Main {
                     bookList.set(j-1,bookList.get(j));
                     bookList.set(j,temp);
                     
+                }else if(bookList.get(i-1).getTitle() == bookList.get(i).getTitle()) {
+                    if(bookList.get(i-1).getYear() > bookList.get(i).getYear()) {
+                        temp = bookList.get(i-1);
+                        bookList.set(i-1,bookList.get(i));
+                        bookList.set(i, temp);
+                    }
                 }
             }
         }
 
-        //sorting the year
-        Book temp2;
-        for(int i=1;i<bookList.size();i++) {
+        // //sorting the year
+        // Book temp2;
+        // for(int i=1;i<bookList.size();i++) {
 
-            if(bookList.get(i-1).getTitle().charAt(0) == bookList.get(i).getTitle().charAt(0)) {
-                if(bookList.get(i-1).getYear() > bookList.get(i).getYear()) {
-                    temp2 = bookList.get(i-1);
-                    bookList.set(i-1,bookList.get(i));
-                    bookList.set(i, temp2);
-                }
-            }
-        }
+            
+        // }
 
         
 
@@ -112,9 +109,9 @@ public class Main {
         int indexFound = -1;
 
         while(left <= right) {
-            int mid = left + (right-1) / 2;
+            int mid = left + (right) / 2;
 
-            int comp = key.compareTo(bookList.get(mid).getTitle());
+            int comp = bookList.get(mid).getTitle().compareTo(key);
 
             //found in the middleeeeeee
             if(comp == 0) {
