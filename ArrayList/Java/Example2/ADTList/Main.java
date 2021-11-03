@@ -69,7 +69,6 @@ public class Main {
             }
         }
 
-
         System.out.println("\n\nLowest odd: " + ((Number)oddList.get(0)).getN());
         System.out.println("Highest odd: " + ((Number)oddList.get(oddList.size()-1)).getN());
 

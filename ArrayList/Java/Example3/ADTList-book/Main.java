@@ -1,4 +1,4 @@
-import java.util.Scanner;
+rimport java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main {
