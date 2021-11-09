@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArrayList <E> {
 
     private E [] data;
@@ -39,8 +41,16 @@ public class ArrayList <E> {
 
     //method addLast() --> add data to the end of the array
     public void addLast(E obj) {
+
+        if(data.length - actSize <= 10) {
+            increaseSize();
+        }
         data[actSize] = obj;
         actSize++;
+    }
+
+    public void increaseSize() {
+        data = Arrays.copyOf(data, data.length*2);
     }
 
     //get number of the element in the array
