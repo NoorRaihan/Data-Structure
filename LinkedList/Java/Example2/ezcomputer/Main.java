@@ -64,11 +64,16 @@ public class Main {
         System.out.println("========================================================");
 
         list = compList.listIterator();
-        Computer highest = compList.getFirst(); 
+        Computer highest = null;
+        int countDetect = 0;
+
         while(list.hasNext()) {
             Computer compObj = (Computer)list.next();
             if(compObj.getBrand().equalsIgnoreCase("Acer") && compObj.getType().equals("notebook")) {
-                if(compObj.getPrice() > highest.getPrice()) {
+                if(countDetect == 0) {
+                    highest = compObj;
+                    countDetect++;
+                } else if(compObj.getPrice() > highest.getPrice()) {
                     highest = compObj;
                 }
             }
