@@ -1,4 +1,4 @@
-rimport java.util.Scanner;
+import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main {
@@ -21,7 +21,8 @@ public class Main {
             String author = in.nextLine();
 
             System.out.print("Year Published: ");
-            int year = Integer.parseInt(in.nextLine());
+
+            d;
 
             System.out.print("Book Price: ");
             double price = Double.parseDouble(in.nextLine());
