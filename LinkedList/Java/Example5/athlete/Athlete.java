@@ -1,7 +1,9 @@
+import java.text.DecimalFormat;
 public class Athlete {
 
     private String name;
     private double distance[];
+    DecimalFormat df = new DecimalFormat("0.00");
 
     //constructor
     public  Athlete(String n, double [] d) {
@@ -37,6 +39,6 @@ public class Athlete {
 
     //toString
     public String toString() {
-        return "\nName: " + name + "\nBest Jump: " + getBestAttempt() + "m" + "\nAverage Distance: " + getAverage() + "m";
+        return "\nName: " + name + "\nBest Jump: " + df.format(getBestAttempt()) + "m" + "\nAverage Distance: " + df.format(getAverage()) + "m";
     }
 }
