@@ -57,6 +57,7 @@ public class Main {
             if(obj.getAverage() > average) {
                 consistentAthlete.insertAtBack(obj);
                 athList.remove(i);
+                i--;
             }
         }
 
