@@ -76,11 +76,11 @@ public class Main {
                     bookList.set(j-1,bookList.get(j));
                     bookList.set(j,temp);
                     
-                }else if(bookList.get(i-1).getTitle() == bookList.get(i).getTitle()) {
-                    if(bookList.get(i-1).getYear() > bookList.get(i).getYear()) {
-                        temp = bookList.get(i-1);
-                        bookList.set(i-1,bookList.get(i));
-                        bookList.set(i, temp);
+                }else if(bookList.get(j-1).getTitle() == bookList.get(j).getTitle()) {
+                    if(bookList.get(j-1).getYear() > bookList.get(j).getYear()) {
+                        temp = bookList.get(j-1);
+                        bookList.set(j-1,bookList.get(j));
+                        bookList.set(j, temp);
                     }
                 }
             }
@@ -111,7 +111,7 @@ public class Main {
         while(left <= right) {
             int mid = left + (right) / 2;
 
-            int comp = bookList.get(mid).getTitle().compareTo(key);
+            int comp = key.compareTo(bookList.get(mid).getTitle());
 
             //found in the middleeeeeee
             if(comp == 0) {
