@@ -84,7 +84,7 @@ public class BSTBook {
         System.out.println(searchBookByANDetail(root,an));
     }
 
-    public String searchBookByANDetail(Node node, String an) {
+    private String searchBookByANDetail(Node node, String an) {
 
         if(node == null) {
             return null;
@@ -107,7 +107,7 @@ public class BSTBook {
         searchBookbyYPDetail(root,yp);
     }
 
-    public void searchBookbyYPDetail(Node node, int yp) {
+    private void searchBookbyYPDetail(Node node, int yp) {
 
 
         if(node  == null) {
@@ -123,5 +123,56 @@ public class BSTBook {
             searchBookbyYPDetail(node.right, yp);
         }
 
+    }
+
+    public void displayBook() {
+        displayBookDetail(root);
+    }
+
+    private void displayBookDetail(Node node) {
+
+        if(node == null) {
+            return;
+        }
+        else {
+            displayBookDetail(node.right);
+            System.out.println(node.data.toString());
+            displayBookDetail(node.left);
+        }
+    }
+
+    public void expensiveCSBook() {
+        Book exp = expensiveCSBookDetail(root,null);
+        System.out.println(exp.toString());
+    }
+
+    private Book expensiveCSBookDetail(Node node, Book exp) {
+
+        if(node != null) {
+
+            if(node.data.getSubject().equalsIgnoreCase("Computer Science")) {
+
+                if(exp == null) {
+                    exp = node.data;
+                }
+
+                Book obj = node.data;
+                double price = obj.getPrice();
+                double expPrice = exp.getPrice();
+    
+                if(price > expPrice) {
+                    exp = obj;
+                }
+    
+                exp = expensiveCSBookDetail(node.left, exp);
+                exp = expensiveCSBookDetail(node.right, exp);
+            }
+            else {
+                exp = expensiveCSBookDetail(node.left, exp);
+                exp = expensiveCSBookDetail(node.right, exp);
+            }
+            
+        }
+        return exp;
     }
 }

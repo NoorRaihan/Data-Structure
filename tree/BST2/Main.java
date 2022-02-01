@@ -37,6 +37,11 @@ public class Main {
         System.out.println("Total Price All Books : RM" + booktree.totalPriceAll());
         System.out.println("Total Price for CS : RM" + booktree.totalPrice("Computer Science"));
         booktree.searchBookByAN("CS0080");
-        booktree.searchBookbyYP(2018);
+        booktree.searchBookbyYP(2014);
+
+        System.out.println("============================================");
+        booktree.displayBook();
+        System.out.println("============================================");
+        booktree.expensiveCSBook();
     }
 }
