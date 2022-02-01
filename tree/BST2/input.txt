@@ -1,0 +1,10 @@
+PS0010;Evolution of Knowledge Science;Philosophy;200.00;2015
+CT0020;Sentiment Analysis in Social Network; Information Technology; 320.00;2018
+ME0030;Managerial Economics;Management;150.00;2019
+MC0040;Costing and Financing;Management;189.00;2014
+CS0050;Swarm Intelligence Algorithm;Computer Science;450.00;2017
+CT0060;The Data and Analaytics Playbook;Information Technology;250.00;2018
+PS0070;The Theory of Everything;Philosophy;600.00;2000
+CS0080;Compiler Constructions;Computer Science;260.00;1999
+CS0090;Linux Operating System;Computer Science;150.00;2001
+CS0100;Adaptive Neural Network;Computer Science;250.00;2016
