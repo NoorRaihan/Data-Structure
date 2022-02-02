@@ -113,12 +113,10 @@ public class BSTBook {
         if(node  == null) {
             return;
         }
-        else if(node.data.getYearPublished() == yp) {
-            System.out.println(node.data.toString());
-            searchBookbyYPDetail(node.left, yp);
-            searchBookbyYPDetail(node.right, yp);
-        }
         else {
+            
+            if(node.data.getYearPublished() == yp) 
+                System.out.println(node.data.toString());
             searchBookbyYPDetail(node.left, yp);
             searchBookbyYPDetail(node.right, yp);
         }
